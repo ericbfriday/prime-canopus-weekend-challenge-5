@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weekend 5 Challenge</title>
+        <meta name="description" content="Weekend 5 homework Prime Challenge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Basic Angular sourcing -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        <!-- Other scripts below -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.4/angular-messages.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-data-table/0.10.10/md-data-table.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery Req'd for bootstrap.js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!-- requires jQuery -->
+
+        <!-- Client-side scripts below to use in place of CDN calls: must add additional files for angular modules -->
+        <!-- <script src="/vendors/angular.min.js"></script>
+        <script src="/vendors/angular-route.min.js"></script>
+        <script src="/vendors/jquery-3.2.1.min.js"></script> -->
+
+        <!-- vv required -->
+        <script src="/scripts/client.js"></script>
+        <script src="/scripts/controller/realestate.controller.js"></script>
+        <script src="/scripts/controller/home.controller.js"></script>
+        <script src="/scripts/services/realestate.service.js"></script>
+
+ 
+        <!-- Bootstrap Resources below -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material-data-table/0.10.10/md-data-table.min.css">
+
+        <!-- vv required -->
+        <link rel="stylesheet" href="/styles/styles.css"></link>
+        
+    </head>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+       <header> <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#!">Home</a>
+                </div>
+                <ul class="nav navbar-nav" id="nav-menu-list">
+                    <li><a href="#!/viewrealestate">View Real Estate Listings</a></li>
+                    <li><a href="#!/addrealestate">Add Listing</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+        <body ng-app="myApp">
+
+        <ng-view>
+
+        </ng-view>
+    </body>
+</html>

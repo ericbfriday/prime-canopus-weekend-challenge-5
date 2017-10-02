@@ -1,0 +1,113 @@
+<!-- Original Bootstrap Display Below -->
+<!-- <section ng-init="rec.getRealEstate()">
+    <div class="row centered" id="viewselector">
+        <div class="col-md-5">
+            <h1 style="text-align: center;">Homes for Sale</h1>
+        </div>
+        <div class="col-md-5">
+            <h1 style="text-align: center;">Homes for Rent</h1>
+        </div>
+    </div>
+    <div class="row centered">
+        <div class="col-md-1"></div>
+        <div class="sales col-md-5" style="padding: 8px 8px 8px 8px; border: solid 1px; border-radius: 8px; margin: 2px 2px 2px 2px;">
+            <table class="table table-condensed table-striped table-responsive">
+                <thead>
+                    <th>Cost</th>
+                    <th>Square Footage</th>
+                    <th>City</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="widget in rec.realEstateListings.listings.data" ng-if="widget.cost">
+                        <td>{{widget.cost}}</td>
+                        <td>{{widget.sqft}}</td>
+                        <td>{{widget.city}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="rentals col-md-5" style="padding: 8px 8px 8px 8px; border: solid 1px; border-radius: 8px; margin: 2px 2px 2px 2px;">
+            <table class="table table-condensed table-striped table-responsive">
+                <thead>
+                    <th>Rent</th>
+                    <th>Square Footage</th>
+                    <th>City</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="widget in rec.realEstateListings.listings.data" ng-if="widget.rent">
+                        <td>{{widget.rent}}</td>
+                        <td>{{widget.sqft}}</td>
+                        <td>{{widget.city}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    </div>
+</section> -->
+
+<!-- Angular Materials Refactor Below -->
+
+<section ng-init="rec.getRealEstate()">
+    <div ng-init="showCosts = true">
+
+        <!-- Selector for Costs / Rents below -->
+        <div class="row centered" id="viewselector">
+            <div class="col-md-1"></div>
+            <div class="col-md-5" ng-click="showCosts = true">
+                <h1 style="text-align: center;">View Homes for Sale</h1>
+            </div>
+            <div class="col-md-5" ng-click="showCosts = false">
+                <h1 style="text-align: center;">View Homes for Rent</h1>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+<!-- Houses for Sale Code -->
+        <md-table-container id="listingsContainer" ng-show="showCosts">
+            <div class="reTable">
+            <table md-table>
+                <thead md-head md-order="query.order">
+                    <tr md-row>
+                        <th md-column md-numeric><span>Cost</span></th>
+                        <th md-column md-numeric><span>Square Footage</span></th>
+                        <th md-column>City</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row ng-repeat="widget in rec.realEstateListings.listings.data" ng-if="widget.cost">
+                        <td md-cell>{{widget.cost | currency}}</td>
+                        <td md-cell>{{widget.sqft}}</td>
+                        <td md-cell>{{widget.city}}</td>
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+        </md-table-container>
+
+
+<!-- Houses for Rent Code -->
+        <md-table-container ng-show="!showCosts" id="listingsContainer">
+            <div class="reTable">
+            <table md-table>
+                <thead md-head md-order="query.order">
+                    <tr md-row>
+                        <th md-column md-numeric><span>Rent</span></th>
+                        <th md-column md-numeric><span>Square Footage</span></th>
+                        <th md-column>City</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row ng-repeat="widget in rec.realEstateListings.listings.data" ng-if="widget.rent">
+                        <td md-cell>{{widget.rent | currency}}</td>
+                        <td md-cell>{{widget.sqft}}</td>
+                        <td md-cell>{{widget.city}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </md-table-container>
+    </div>
+    
+</section>

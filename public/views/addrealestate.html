@@ -1,0 +1,41 @@
+<form style="padding: 55px 10px 10px 10px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="cost">Cost:</label>
+            <input type="cost" class="form-control" id="cost" ng-model="rec.costIn" placeholder="Cost (if sale)">
+        </div>
+        <div class="form-group">
+                <label for="rent">Rent:</label>
+                <input type="rent" class="form-control" id="cost" ng-model="rec.rentIn" placeholder="Rent (if rental)">
+            </div>
+        <div class="form-group">
+            <label for="sqft">Square Footage:</label>
+            <input type="sqft" class="form-control" id="sqft" ng-model="rec.sqftIn" placeholder="Square Footage">
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="city" class="form-control" id="city" ng-model="rec.cityIn" placeholder="City">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="rec.addRealEstateSale()" data-toggle="modal" data-target="#myModal">Submit</button>
+    </div>
+    <div class="col-md-2"></div>
+
+<!-- Confirmation Pop Up -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Success!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Listing added!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

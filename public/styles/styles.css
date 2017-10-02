@@ -1,0 +1,84 @@
+.navbar {
+    border: none;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    background-color: black;
+    color: gray
+}
+
+/* .navbar a:selection{
+    color: black;
+} */
+
+#nav-menu-list {
+    position: absolute;
+    right: 0;
+}
+
+.navbar-nav li:hover {
+    background-color: black;
+    color: gray
+}
+
+.nav li:hover {
+    background-color: black;
+    color: gray
+}
+
+.jumbotron {
+    background-image: url(/images/homeforsale.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    text-align: center;
+}
+
+#viewselector {
+    text-align: center;
+    padding-top: 40px;
+    background-color: darkgray;
+}
+
+.centered > div > h1 {
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+    float: middle;
+    margin: auto;
+    /* font-size: 0; */
+ }
+
+ /* .centered > div {
+    float: top;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    margin: auto;
+ } */
+
+ #listingsContainer {
+     padding: 10px 100px 10px 100px;
+ }
+
+ .reTable {
+     border: 2px solid orange;
+     border-radius: 8px;
+ }
